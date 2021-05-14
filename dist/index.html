@@ -1,33 +1,413 @@
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
 
 	<meta charset="utf-8">
-	<!-- <base href="/"> -->
 
-	<title>OptimizedHTML 5</title>
-	<meta name="description" content="Startup HTML template OptimizedHTML 5">
+	<title>RCBI</title>
+	<meta name="description" content="RCBI description">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 	<link rel="icon" href="images/favicon.png">
-	<meta property="og:image" content="images/dist/preview.jpg">
+	<meta property="og:image" content="images/dist/OG.jpg">
+
+	<!-- FONTS -->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 	
 	<link rel="stylesheet" href="css/main.min.css">
 
 </head>
-
 <body>
-
-	<div style="max-width: 700px; margin: auto">
-
-		<img src="images/dist/preview.jpg" alt="Start HTML5 Template" style="width: 100%"><br><br>
-		<h2>Welcome to startup HTML template OptimizedHTML 5!</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam reprehenderit nulla alias expedita a qui, pariatur doloremque ipsa fugit laboriosam odio iure recusandae laborum delectus praesentium magni reiciendis voluptatem. Sed.</p>
-	
+	<div class="lines">
+		<div class="custom-row">
+			<div class="custom-row__col"></div>
+			<div class="custom-row__col"></div>
+			<div class="custom-row__col"></div>
+			<div class="custom-row__col"></div>
+		</div>
 	</div>
+	<header class="main-header">
+		<div class="main-header__logo">
+			<a href="index.html">
+				<img src="../images/dist/logo.svg" alt="RCBI logo">
+			</a>
+		</div>
+		<div class="main-header__nav">
+			<div class="wrapper">
+				<nav class="main-nav">
+					<a href="#" class="main-nav__link">Home</a>
+					<a href="#" class="main-nav__link">About us</a>
+					<a href="#" class="main-nav__link">Products</a>
+					<a href="#" class="main-nav__link">Contact</a>
+				</nav>
+			</div>
+		</div>
+		<div class="main-header__lang">
+			<select class="select-lang">
+				<option value="ru">Ru</option>
+				<option value="en">En</option>
+				<option value="ch">Ch</option>
+			</select>
+		</div>
+	</header>
+
+<!--<section class="splash-section" style="background-image: url('../images/dist/scene.png');">-->
+<section class="splash-section" id="splash">
+	<div class="video-background">
+		<div class="video-foreground">
+			<iframe
+				width="420"
+				height="315"
+				frameborder="0"
+				src="https://www.youtube.com/embed/XykrZ7j9JF4?controls=0&autoplay=1&mute=1"
+			>
+			</iframe>
+		</div>
+	</div>
+	<div class="splash-section__content">
+		<h1 class="title title-is1 text-uppercase">
+			Digital solutions for <span class="primary-text">RCBI</span> Companies
+		</h1>
+		<p>
+			Improve your performance and customer experience!
+		</p>
+		<button class="btn btn--primary activate-slide">Explore</button>
+	</div>
+</section>
+<main>
+  <section class="slide-section" id="slide">
+    <div class="about-section black-text">
+      <div class="custom-row">
+        <div class="custom-row__col">
+          <div class="about-section__info">
+            <p class="title title-is5 text-uppercase">
+              RCBI Solutions is software developer that helps RCBI
+              Companies interact with their Customers successfully
+              by proposing complex platforms and digital tool.
+            </p>
+          </div>
+        </div>
+        <div class="custom-row__col">
+          <div class="about-section__info">
+            <p class="about-section__text">
+              RCBI Solutions is software developer that helps RCBI
+              Companies interact with their Customers successfully
+              by proposing complex platforms and digital tool.
+            </p>
+            <p class="about-section__text">
+              RCBI Solutions provides instruments to automate day-to-day
+              processes and make the workforce more effectively in a way
+              not possible before!
+            </p>
+            <p class="about-section__text">
+              Our main platform - RCBI Assistant - and other adding value
+              products are dedicated especially for companies that are
+              looking for smart and digital helper which can extremely
+              decrease the time of work routines and convert it into real value.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="products-slider-wrapper">
+      <div class="products-slider">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="product-card product-card--blue">
+              <div class="product-card__icon">
+                <i class="fas fa-plus"></i>
+              </div>
+              <div class="product-card__preview">
+                <div class="product-card__logo">
+                  <img src="images/dist/logo/assistant.svg" alt="logo assistant">
+                </div>
+                <div class="product-card__preview-title">
+                  <span class="title title-is7">RCBI.ASSISTANT</span>
+                </div>
+              </div>
+              <div class="product-card__details">
+                <span class="title title-is7">RCBI.ASSISTANT</span>
+                <span class="title title-is7">Product launch 2021’ Q2</span>
+                <div class="product-card__details__text">
+                  <p>
+                    This is a digital tool for high-quality interaction with
+                    customers and tremendous time savings in terms of program
+                    calculations, sending commercial proposals, and ensuring
+                    always up-to-date information on program pricing and policies.
+                  </p>
+                </div>
+                <div class="product-card__details__btn">
+                  <a href="#" class="btn">Learn more</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="product-card product-card--pink">
+              <div class="product-card__icon">
+                <i class="fas fa-plus"></i>
+              </div>
+              <div class="product-card__preview">
+                <div class="product-card__logo">
+                  <img src="images/dist/logo/mls.svg" alt="logo mls">
+                </div>
+                <div class="product-card__preview-title">
+                  <span class="title title-is7">RCBI.MLS</span>
+                </div>
+              </div>
+              <div class="product-card__details">
+                <span class="title title-is7">RCBI.MLS</span>
+                <span class="title title-is7">Product launch 2021’ Q4</span>
+                <div class="product-card__details__text">
+                  <p>
+                    Dynamic real estate database to be used in RCBI offers with
+                    ready-to-use objects presentations and advanced knowlagebase
+                    of valuable local contacts to close the deal succesfully and
+                    in a short terms
+                  </p>
+                </div>
+                <div class="product-card__details__btn">
+                  <a href="#" class="btn">Learn more</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="product-card product-card--violet">
+              <div class="product-card__icon">
+                <i class="fas fa-plus"></i>
+              </div>
+              <div class="product-card__preview">
+                <div class="product-card__logo">
+                  <img src="images/dist/logo/freevisamap.svg" alt="logo freevisamap">
+                </div>
+                <div class="product-card__preview-title">
+                  <span class="title title-is7">RCBI.FreeVisaMap</span>
+                </div>
+              </div>
+              <div class="product-card__details">
+                <span class="title title-is7">RCBI.RCBI.FreeVisaMap</span>
+                <span class="title title-is7">Product launch 2022’ Q1</span>
+                <div class="product-card__details__text">
+                  <p>
+                    Website widget, that allows to collect client interest by providing
+                    user-friendly interface to compare all important possibilities and
+                    characteristics of all existing passports
+                  </p>
+                </div>
+                <div class="product-card__details__btn">
+                  <a href="#" class="btn">Learn more</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="product-card product-card--orange">
+              <div class="product-card__icon">
+                <i class="fas fa-plus"></i>
+              </div>
+              <div class="product-card__preview">
+                <div class="product-card__logo">
+                  <img src="images/dist/logo/qualifier.svg" alt="logo qualifier">
+                </div>
+                <div class="product-card__preview-title">
+                  <span class="title title-is7">RCBI.QUALIFIER</span>
+                </div>
+              </div>
+              <div class="product-card__details">
+                <span class="title title-is7">RCBI.QUALIFIER</span>
+                <span class="title title-is7">Product launch 2022’ Q1</span>
+                <div class="product-card__details__text">
+                  <p>
+                    Internal sales tool that helps RCBI managers to qualify client interest
+                  </p>
+                </div>
+                <div class="product-card__details__btn">
+                  <a href="#" class="btn">Learn more</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="product-card product-card--yellow">
+              <div class="product-card__icon">
+                <i class="fas fa-plus"></i>
+              </div>
+              <div class="product-card__preview">
+                <div class="product-card__logo">
+                  <img src="images/dist/logo/widgets.svg" alt="logo widgets">
+                </div>
+                <div class="product-card__preview-title">
+                  <span class="title title-is7">RCBI.WIDGETS</span>
+                </div>
+              </div>
+              <div class="product-card__details">
+                <span class="title title-is7">RCBI.WIDGETS</span>
+                <span class="title title-is7">Product launch 2022’ Q2</span>
+                <div class="product-card__details__text">
+                  <p>
+                    This is a digital tool for high-quality interaction with customers
+                    and tremendous time savings in terms of program calculations, sending
+                    commercial proposals, and ensuring always up-to-date information on
+                    program pricing and policies.
+                  </p>
+                </div>
+                <div class="product-card__details__btn">
+                  <a href="#" class="btn">Learn more</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="product-card product-card--lightblue">
+              <div class="product-card__icon">
+                <i class="fas fa-plus"></i>
+              </div>
+              <div class="product-card__preview">
+                <div class="product-card__logo">
+                  <img src="images/dist/logo/landingassistant.svg" alt="logo landing assistant">
+                </div>
+                <div class="product-card__preview-title">
+                  <span class="title title-is7">RCBI.landing assistant</span>
+                </div>
+              </div>
+              <div class="product-card__details">
+                <span class="title title-is7">RCBI.LA</span>
+                <span class="title title-is7">Product launch 2022’ Q2</span>
+                <div class="product-card__details__text">
+                  <p>
+                    This is a digital tool for high-quality interaction with customers
+                    and tremendous time savings in terms of program calculations, sending
+                    commercial proposals, and ensuring always up-to-date information on
+                    program pricing and policies.
+                  </p>
+                </div>
+                <div class="product-card__details__btn">
+                  <a href="#" class="btn">Learn more</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="products-slider-prev">
+          <i class="fas fa-arrow-left"></i>
+        </div>
+        <div class="products-slider-next">
+          <i class="fas fa-arrow-right"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="team-section">
+    <div class="custom-row">
+      <div class="custom-row__col"></div>
+      <div class="custom-row__col custom-row__col--50per relative">
+        <div class="arrow-prev slick-arrow-prev">
+          <i class="fas fa-arrow-left"></i>
+        </div>
+        <div class="arrow-next slick-arrow-next">
+          <i class="fas fa-arrow-right"></i>
+        </div>
+        <div class="custom-row">
+          <div class="custom-row__col custom-row__col--50per">
+            <h3 class="title title-is7 text-uppercase">
+              <span class="primary-text">ABOUT</span> <br>
+              RCBI
+              <span class="primary-text">SOLUTIONS</span>
+            </h3>
+            <h2 class="title title-is3 text-uppercase team-title">
+              TEAM with 30+ year experience in IT and RCBI
+            </h2>
+          </div>
+          <div class="custom-row__col custom-row__col--50per">
+            <div class="team-slider-photos slider-for">
+              <div class="team-slider-photos__photo">
+                <img src="images/dist/team/team1.png" alt="Mikhail Molokoedov">
+              </div>
+              <div class="team-slider-photos__photo">
+                <img src="images/dist/team/team2.png" alt="Roman Gods">
+              </div>
+              <div class="team-slider-photos__photo">
+                <img src="images/dist/team/team1.png" alt="Mikhail Molokoedov">
+              </div>
+              <div class="team-slider-photos__photo">
+                <img src="images/dist/team/team2.png" alt="Roman Gods">
+              </div>
+              <div class="team-slider-photos__photo">
+                <img src="images/dist/team/team1.png" alt="Mikhail Molokoedov">
+              </div>
+              <div class="team-slider-photos__photo">
+                <img src="images/dist/team/team2.png" alt="Roman Gods">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="custom-row">
+      <div class="custom-row__col"></div>
+      <div class="custom-row__col custom-row__col--75per">
+        <div class="team-slider-info slider-nav">
+          <div class="team-slider-info__details">
+            <span class="team-slider-info__name title title-is7">Mikhail <br>Molokoedov</span>
+            <p class="team-slider-info__desc">
+              has more than 30 years intense experience in IT. Was fully responsible  of technical departments in huge enterprises and global software development companies. For about 15 years Mikhail was involved in software development as a full-stack
+              programmer in different industries and variety of project sizes,
+              from mobile applications to complex IT systems. Utilizes his advanced IT knowledge in Universities as an educator.
+            </p>
+          </div>
+          <div class="team-slider-info__details">
+            <span class="team-slider-info__name title title-is7">Roman <br>Gods</span>
+            <p class="team-slider-info__desc">
+              is experienced IT evangelist with 15-year background in the
+              field of business processes automatization. Used to work with Fortune 500 companies, was fully responsible of more than 100 successful digitalization projects. Roman is a founder of several SaaS products for corporate automatization and professional
+              adviser in the field of complex IT platforms
+              implementation.
+            </p>
+          </div>
+          <div class="team-slider-info__details">
+            <span class="team-slider-info__name title title-is7">Mikhail <br>Molokoedov</span>
+            <p class="team-slider-info__desc">
+              has more than 30 years intense experience in IT. Was fully responsible  of technical departments in huge enterprises and global software development companies. For about 15 years Mikhail was involved in software development as a full-stack
+              programmer in different industries and variety of project sizes,
+              from mobile applications to complex IT systems. Utilizes his advanced IT knowledge in Universities as an educator.
+            </p>
+          </div>
+          <div class="team-slider-info__details">
+            <span class="team-slider-info__name title title-is7">Roman <br>Gods</span>
+            <p class="team-slider-info__desc">
+              is experienced IT evangelist with 15-year background in the
+              field of business processes automatization. Used to work with Fortune 500 companies, was fully responsible of more than 100 successful digitalization projects. Roman is a founder of several SaaS products for corporate automatization and professional
+              adviser in the field of complex IT platforms
+              implementation.
+            </p>
+          </div>
+          <div class="team-slider-info__details">
+            <span class="team-slider-info__name title title-is7">Mikhail <br>Molokoedov</span>
+            <p class="team-slider-info__desc">
+              has more than 30 years intense experience in IT. Was fully responsible  of technical departments in huge enterprises and global software development companies. For about 15 years Mikhail was involved in software development as a full-stack
+              programmer in different industries and variety of project sizes,
+              from mobile applications to complex IT systems. Utilizes his advanced IT knowledge in Universities as an educator.
+            </p>
+          </div>
+          <div class="team-slider-info__details">
+            <span class="team-slider-info__name title title-is7">Roman <br>Gods</span>
+            <p class="team-slider-info__desc">
+              is experienced IT evangelist with 15-year background in the
+              field of business processes automatization. Used to work with Fortune 500 companies, was fully responsible of more than 100 successful digitalization projects. Roman is a founder of several SaaS products for corporate automatization and professional
+              adviser in the field of complex IT platforms
+              implementation.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
 
 	<script src="js/app.min.js"></script>
 
