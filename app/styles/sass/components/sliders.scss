@@ -1,0 +1,407 @@
+// Products slider
+.slide-section {
+  &.slide {
+    .products-slider {
+      .products-slider-next {
+        right: 30px;
+        left: auto;
+      }
+    }
+  }
+}
+.products-slider {
+  height: 50vh;
+  min-height: 330px;
+  position: relative;
+
+  .swiper-wrapper {
+    .swiper-slide {
+      .product-card {
+        position: relative;
+        height: 100%;
+        cursor: grab;
+
+        &:active {
+          cursor: grabbing;
+        }
+
+        &--blue {
+          .product-card__details {
+            background: $blue;
+
+            &__btn {
+              .btn {
+                &:hover {
+                  color: $blue;
+                }
+              }
+            }
+          }
+        }
+
+        &--pink {
+          .product-card__details {
+            background: $pink;
+
+            &__btn {
+              .btn {
+                &:hover {
+                  color: $pink;
+                }
+              }
+            }
+          }
+        }
+
+        &--violet {
+          .product-card__details {
+            background: $violet;
+
+            &__btn {
+              .btn {
+                &:hover {
+                  color: $violet;
+                }
+              }
+            }
+          }
+        }
+
+        &--orange {
+          .product-card__details {
+            background: $orange;
+
+            &__btn {
+              .btn {
+                &:hover {
+                  color: $orange;
+                }
+              }
+            }
+          }
+        }
+
+        &--yellow {
+          .product-card__details {
+            background: $yellow;
+            color: $black;
+
+            &__btn {
+              .btn {
+                @extend .btn--dark;
+
+                &:hover {
+                  color: $yellow;
+                }
+              }
+            }
+          }
+        }
+
+        &--lightblue {
+          .product-card__details {
+            background: $lightblue;
+
+            &__btn {
+              .btn {
+                &:hover {
+                  color: $lightblue;
+                }
+              }
+            }
+          }
+        }
+
+        &:hover {
+          .product-card__details {
+            opacity: 1;
+            visibility: visible;
+
+            .title,
+            &__text,
+            &__btn {
+              opacity: 1;
+              visibility: visible;
+            }
+          }
+        }
+
+        &__icon {
+          position: absolute;
+          top: 30px;
+          right: 30px;
+          color: $primary;
+        }
+
+        &__preview {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+        }
+
+        &__logo {
+          height: 90px;
+
+          img {
+            max-width: 100%;
+            max-height: 100%;
+          }
+        }
+
+        &__preview-title {
+          position: absolute;
+          bottom: 70px;
+          left: 0;
+          width: 100%;
+          text-align: center;
+        }
+
+        &__details {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+          padding: 50px 70px;
+          z-index: 10;
+          opacity: 0;
+          visibility: hidden;
+          @include transition(.3s, all);
+
+          .title {
+            display: block;
+            text-transform: uppercase;
+            text-align: center;
+            opacity: 0;
+            visibility: hidden;
+            @include transition(.3s .3s, all);
+          }
+
+          &__text {
+            min-height: 120px;
+            margin: 30px 0;
+            opacity: 0;
+            visibility: hidden;
+            @include transition(.3s .1s, all);
+          }
+
+          &__btn {
+            text-align: center;
+            opacity: 0;
+            visibility: hidden;
+            @include transition(.3s .2s, all);
+          }
+        }
+      }
+    }
+  }
+
+  .products-slider-prev,
+  .products-slider-next {
+    @include center(vertical);
+    z-index: 10;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      svg {
+        path {
+          fill: $primary;
+        }
+      }
+    }
+
+    svg {
+      path {
+        fill: $white;
+        @include transition(.2s, fill);
+      }
+    }
+  }
+
+  .products-slider-prev {
+    left: 30px;
+  }
+
+  .products-slider-next {
+    right: auto;
+    left: calc(25% - 80px);
+    @include transition(.2s, left)
+  }
+}
+
+// Team slider
+.team-slider-photos {
+  &__photo {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    min-height: 591px;
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+      @include img-cover(top center);
+    }
+  }
+}
+
+.team-slider-info {
+  margin-top: -40px;
+
+  &__details {
+    opacity: .39;
+    min-height: 330px;
+    position: relative;
+    cursor: grab;
+    @include transition(.3s, opacity);
+
+    &:active {
+      cursor: grabbing;
+    }
+    
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background: linear-gradient(90deg, $primary 0%, $black 100%);
+      opacity: 0;
+      visibility: hidden;
+      @include transition(.3s, opacity)
+    }
+
+    &.slick-center {
+      opacity: 1;
+
+      &:after {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
+  &__name {
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    min-height: 36px;
+    margin-bottom: 40px;
+  }
+
+  &__desc {
+    letter-spacing: -0.5px;
+    padding-right: 30px;
+  }
+}
+
+.slick-arrow-prev,
+.slick-arrow-next {
+  position: absolute;
+  top: 190px;
+}
+
+.slick-arrow-prev {
+  left: -100px;
+}
+
+.slick-arrow-next {
+  right: -100px;
+}
+
+// Arrow styles
+.arrow-next, .arrow-prev {
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  border-radius: 50%;
+  opacity: .4;
+  border: 2px solid rgba($white, .3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  @include transition(.2s, all);
+
+  svg {
+    transform: translateZ(0);
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.arrow-next {
+  &:hover {
+    svg {
+      animation: wobble-right .7s ease-in-out 1;
+    }
+  }
+}
+
+.arrow-prev {
+  &:hover {
+    svg {
+      animation: wobble-left .7s ease-in-out 1;
+    }
+  }
+}
+
+@keyframes wobble-right {
+  20% {
+    transform: translateX(2px);
+  }
+
+  40% {
+    transform: translateX(-2px);
+  }
+
+  60% {
+    transform: translateX(1px);
+  }
+
+  80% {
+    transform: translateX(-1px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes wobble-left {
+  20% {
+    transform: translateX(-2px);
+  }
+
+  40% {
+    transform: translateX(2px);
+  }
+
+  60% {
+    transform: translateX(-1px);
+  }
+
+  80% {
+    transform: translateX(1px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}

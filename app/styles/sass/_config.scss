@@ -1,0 +1,88 @@
+// Import section
+@import '../../../node_modules/bootstrap/scss/bootstrap-reboot'; // Bootstrap Reboot collection
+//@import 'node_modules/bootstrap/scss/bootstrap-grid.scss';
+@import "../../libs/selectric/selectric";
+@import "../../libs/slick/slick";
+@import '../../../node_modules/swiper/css/swiper.min';
+
+// General document styles
+input, textarea {
+  outline: none;
+}
+
+body {
+  background: $black;
+  font-family: $userfont;
+  font-size: $fontsize;
+  line-height: $lineheight;
+  color: $textcolor;
+  min-width: 320px;
+  position: relative;
+  overflow-x: hidden;
+}
+
+main {
+  height: 10000px;
+  background: $black;
+  position: relative;
+  z-index: 1;
+}
+
+.wrapper {
+  max-width: 1003px;
+  margin: 0 auto;
+  padding: 0 16px;
+  position: relative;
+}
+
+.relative {
+  position: relative;
+}
+
+.custom-row {
+  display: flex;
+
+  &__col {
+    width: 25%;
+
+    &--50per {
+      width: 50%;
+    }
+
+    &--75per {
+      width: 75%;
+    }
+  }
+}
+
+.lines {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  pointer-events: none;
+
+  .custom-row {
+    &__col {
+      position: relative;
+
+      &:last-child {
+        &:after {
+          display: none;
+        }
+      }
+
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 1px;
+        height: calc(100vh + 50px);
+        background: $gray-line;
+      }
+    }
+  }
+}

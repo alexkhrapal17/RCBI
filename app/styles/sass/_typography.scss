@@ -1,0 +1,53 @@
+/*
+  title-is1 -> 72px bold
+  title-is2 -> 60px bold
+  title-is3 -> 48px bold
+  title-is4 -> 24px
+  title-is5 -> 21px
+  title-is6 -> 18px
+  title-is7 -> 14px
+  title-is8 -> 13px
+*/
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400;
+}
+
+.title {
+  line-height: 1.2;
+
+  &.title-is1 {
+    font-size: rems(72);
+    font-weight: 700;
+  }
+
+  &.title-is2 {
+    font-size: rems(60);
+    font-weight: 700;
+  }
+
+  &.title-is3 {
+    font-size: rems(48);
+    font-weight: 700;
+  }
+
+  &.title-is4 {
+    font-size: rems(24);
+  }
+
+  &.title-is5 {
+    font-size: rems(21);
+  }
+
+  &.title-is6 {
+    font-size: rems(18);
+  }
+
+  &.title-is7 {
+    font-size: rems(14);
+  }
+
+  &.title-is8 {
+    font-size: rems(14);
+  }
+}

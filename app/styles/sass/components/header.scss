@@ -1,0 +1,139 @@
+.main-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  min-height: 120px;
+  padding: 35px 35px 35px 70px;
+
+  &__logo {
+    flex-basis: 423px;
+
+    a {
+      display: block;
+    }
+  }
+
+  &__nav {
+    flex-basis: 970px;
+  }
+
+  &__lang {
+    flex-basis: 423px;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.main-nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 35px;
+
+  &__link {
+    display: block;
+    font-size: rems(16);
+    font-weight: 600;
+    line-height: 1;
+    color: $white;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin: 0 26px;
+    user-select: none;
+    @include transition(.2s, color);
+
+    &:hover {
+      color: $primary;
+      text-decoration: none;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
+
+.selectric-select-lang {
+  &.selectric-open {
+    .selectric {
+      .button {
+        transform: scaleY(-1) translateY(-3px);
+      }
+    }
+  }
+
+  .selectric, .selectric-items {
+    background: none;
+    border: none;
+  }
+
+  .selectric {
+    font-family: $userfont;
+
+    .label {
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: rems(18);
+      line-height: 1.1;
+      letter-spacing: -.5px;
+      color: $white;
+      height: auto;
+    }
+
+    .button {
+      background: none;
+      height: 19px;
+      @include transition(.2s, transform);
+
+      &:after {
+        border: none;
+        border-left: 2px solid $white;
+        border-bottom: 2px solid $white;
+        width: 8px;
+        height: 8px;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  .selectric-items {
+    box-shadow: none;
+
+    ul {
+      padding: 5px 0;
+
+      li {
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: rems(18);
+        line-height: 1.1;
+        letter-spacing: -.5px;
+        color: $white;
+        padding: 5px 10px;
+        @include transition(.2s, color);
+
+        &:hover {
+          background: none;
+          color: $primary;
+        }
+
+        &.highlighted {
+          display: none;
+        }
+
+        &.selected {
+          background: none;
+        }
+      }
+    }
+  }
+}

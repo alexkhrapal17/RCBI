@@ -1,0 +1,69 @@
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.line-through {
+  text-decoration: line-through;
+}
+
+// Fonts weight
+.light {
+  font-weight: 300;
+}
+
+.regular {
+  font-weight: 400;
+}
+
+.medium {
+  font-weight: 500;
+}
+
+.semi-bold {
+  font-weight: 600;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.extra-bold {
+  font-weight: 800;
+}
+
+.black {
+  font-weight: 800;
+}
+
+// Colors
+.primary-text {
+  color: $primary;
+}
+
+.primary-bg {
+  background-color: $primary;
+}
+
+.black-text {
+  color: $black;
+}
+
+.black-bg {
+  background-color: $black;
+}

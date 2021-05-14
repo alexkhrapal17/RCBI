@@ -1,0 +1,33 @@
+// Colors
+$primary: #00FFA5;
+$white: #FFF;
+$black: #000;
+$dark: #0E0E0E;
+$gray: #808080;
+$gray-line: #464646;
+
+$blue: #5877F9;
+$pink: #F9285A;
+$violet: #B478F9;
+$orange: #FF9D45;
+$yellow: #E2DD20;
+$lightblue: #59C2FC;
+
+$gradient: linear-gradient(180deg, $primary 0%, $primary 100%);
+
+// User variables
+$fontsize: 16px; // Body Font Size
+$textcolor: $white; // Text Color
+$lineheight: 1.2; // Document Line Height
+$userfont: 'Exo 2', sans-serif; // User Font Family
+$systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif; // System Font Family
+
+// Bootstrap compatible gutter variable => $gutter
+$grid-gutter-width: 30px;
+$gutter: $grid-gutter-width;
+
+// Media
+$screen-lg: 1200px;
+$screen-md: 992px;
+$screen-sm: 767px;
+$screen-xs: 575px;
