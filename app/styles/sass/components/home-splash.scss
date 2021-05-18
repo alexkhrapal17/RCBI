@@ -16,6 +16,10 @@
     background-image: url('../images/dist/scene.png');
   }
 
+  @media (max-width: $screen-xxs) {
+    padding: 140px 20px 50px;
+  }
+
   &__content {
     flex-basis: 395px;
     max-width: 395px;

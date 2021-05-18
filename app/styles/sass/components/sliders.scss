@@ -276,6 +276,10 @@
     margin: 0 -50px;
   }
 
+  @media (max-width: $screen-xxs) {
+    margin: 0 -20px;
+  }
+
   &__photo {
     display: flex !important;
     flex-direction: column;
@@ -383,6 +387,10 @@
     left: auto;
     right: 115px;
   }
+
+  @media (max-width: $screen-xxs) {
+    right: 90px;
+  }
 }
 
 .slick-arrow-next {
@@ -394,6 +402,10 @@
 
   @media (max-width: $screen-md) {
     right: 50px;
+  }
+
+  @media (max-width: $screen-xxs) {
+    right: 20px;
   }
 }
 
@@ -414,6 +426,10 @@
   @media (max-width: $screen-md) {
     display: block;
     padding: 60px 50px;
+  }
+
+  @media (max-width: $screen-xxs) {
+    padding: 40px 20px;
   }
 
   &__photo {

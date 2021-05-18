@@ -23,6 +23,10 @@ h1, h2, h3, h4, h5, h6 {
     @media (max-width: $screen-md) {
       font-size: rems(60);
     }
+
+    @media (max-width: $screen-xxs) {
+      font-size: rems(50);
+    }
   }
 
   &.title-is2 {
@@ -33,6 +37,10 @@ h1, h2, h3, h4, h5, h6 {
   &.title-is3 {
     font-size: rems(48);
     font-weight: 700;
+
+    @media (max-width: $screen-xxs) {
+      font-size: rems(36);
+    }
   }
 
   &.title-is4 {

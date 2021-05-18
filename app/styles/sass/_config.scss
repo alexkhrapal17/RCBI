@@ -92,6 +92,10 @@ main {
         padding: 0 50px;
         width: 100%;
       }
+
+      @media (max-width: $screen-xxs) {
+        padding: 0 20px;
+      }
     }
   }
 }
