@@ -37,6 +37,7 @@
 	},
 	"dependencies": {
 		"@fortawesome/fontawesome-free": "^5.15.3",
+		"lightgallery": "^2.0.1",
 		"swiper": "^5.4.5"
 	}
 }

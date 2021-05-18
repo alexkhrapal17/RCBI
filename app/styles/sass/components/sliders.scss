@@ -622,6 +622,15 @@
   }
 }
 
+.arrow-plus {
+  &:hover {
+    svg {
+      animation: none;
+      transform: scale(1.05);
+    }
+  }
+}
+
 @keyframes wobble-top {
   20% {
     transform: translateY(2px);

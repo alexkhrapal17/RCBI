@@ -42,4 +42,20 @@
       background: $black;
     }
   }
+
+  &--full {
+    width: 100%;
+    min-width: unset;
+  }
+
+  &--filled {
+    background: $white;
+    color: $black;
+
+    &:hover {
+      background: $black;
+      border-color: $black;
+      color: $primary;
+    }
+  }
 }

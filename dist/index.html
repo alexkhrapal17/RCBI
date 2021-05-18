@@ -22,12 +22,9 @@
 
 </head>
 <body>
-	<div class="lines">
-		<div class="custom-row">
-			<div class="custom-row__col"></div>
-			<div class="custom-row__col"></div>
-			<div class="custom-row__col"></div>
-			<div class="custom-row__col"></div>
+	<div class="scroll-up">
+		<div class="arrow-prev arrow-up">
+			<i class="fas fa-arrow-up"></i>
 		</div>
 	</div>
 	<header class="main-header">
@@ -39,33 +36,53 @@
 		<div class="main-header__nav">
 			<div class="wrapper">
 				<nav class="main-nav">
-					<a href="#" class="main-nav__link">Home</a>
-					<a href="#" class="main-nav__link">About us</a>
-					<a href="#" class="main-nav__link">Products</a>
-					<a href="#" class="main-nav__link">Contact</a>
+					<a href="#" class="main-nav__link homepage-link">Home</a>
+					<a href="#aboutus" class="main-nav__link about-us-link">About us</a>
+					<a href="#products" class="main-nav__link products-link">Products</a>
+					<a href="#footer" class="main-nav__link footer-link">Contact</a>
 				</nav>
+			</div>
+			<div class="contact-us__socials show-mobile">
+				<a href="#" class="contact-us__link">
+					<i class="fab fa-instagram-square"></i>
+				</a>
+				<a href="#" class="contact-us__link">
+					<i class="fab fa-facebook-square"></i>
+				</a>
+				<a href="#" class="contact-us__link">
+					<i class="fab fa-linkedin"></i>
+				</a>
+				<a href="#" class="contact-us__link">
+					<i class="fab fa-twitter-square"></i>
+				</a>
 			</div>
 		</div>
 		<div class="main-header__lang">
-			<select class="select-lang">
-				<option value="ru">Ru</option>
-				<option value="en">En</option>
-				<option value="ch">Ch</option>
-			</select>
+			<div id="select-lang">
+				<select class="select-lang">
+					<option value="ru">Ru</option>
+					<option value="en">En</option>
+					<option value="ch">Ch</option>
+				</select>
+			</div>
+		</div>
+		<div class="mobile-toggle">
+			<span class="line1"></span>
+			<span class="line2"></span>
+			<span class="line3"></span>
 		</div>
 	</header>
-
-<!--<section class="splash-section" style="background-image: url('../images/dist/scene.png');">-->
-<section class="splash-section" id="splash">
+<!--<section class="splash-section" id="splash">-->
+<section class="splash-section" id="splash" style="background-image: url('../images/dist/scene.png');">
 	<div class="video-background">
 		<div class="video-foreground">
-			<iframe
+			<!--<iframe
 				width="420"
 				height="315"
 				frameborder="0"
 				src="https://www.youtube.com/embed/XykrZ7j9JF4?controls=0&autoplay=1&mute=1"
 			>
-			</iframe>
+			</iframe>-->
 		</div>
 	</div>
 	<div class="splash-section__content">
@@ -79,10 +96,18 @@
 	</div>
 </section>
 <main>
+  <div class="lines">
+  <div class="custom-row">
+    <div class="custom-row__col"></div>
+    <div class="custom-row__col"></div>
+    <div class="custom-row__col"></div>
+    <div class="custom-row__col"></div>
+  </div>
+</div>
   <section class="slide-section" id="slide">
     <div class="about-section black-text">
       <div class="custom-row">
-        <div class="custom-row__col">
+        <div class="custom-row__col w100-md">
           <div class="about-section__info">
             <p class="title title-is5 text-uppercase">
               RCBI Solutions is software developer that helps RCBI
@@ -91,7 +116,7 @@
             </p>
           </div>
         </div>
-        <div class="custom-row__col">
+        <div class="custom-row__col w100-md">
           <div class="about-section__info">
             <p class="about-section__text">
               RCBI Solutions is software developer that helps RCBI
@@ -113,7 +138,7 @@
         </div>
       </div>
     </div>
-    <div class="products-slider-wrapper">
+    <div class="products-slider-wrapper" id="products">
       <div class="products-slider">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
@@ -302,114 +327,297 @@
       </div>
     </div>
   </section>
-  <section class="team-section">
-    <div class="custom-row">
-      <div class="custom-row__col"></div>
-      <div class="custom-row__col custom-row__col--50per relative">
-        <div class="arrow-prev slick-arrow-prev">
-          <i class="fas fa-arrow-left"></i>
-        </div>
-        <div class="arrow-next slick-arrow-next">
-          <i class="fas fa-arrow-right"></i>
-        </div>
-        <div class="custom-row">
-          <div class="custom-row__col custom-row__col--50per">
-            <h3 class="title title-is7 text-uppercase">
-              <span class="primary-text">ABOUT</span> <br>
-              RCBI
-              <span class="primary-text">SOLUTIONS</span>
-            </h3>
-            <h2 class="title title-is3 text-uppercase team-title">
-              TEAM with 30+ year experience in IT and RCBI
-            </h2>
+  <section class="team-testimonials-wrapper">
+    <section class="team-section">
+      <div class="custom-row">
+        <div class="custom-row__col"></div>
+        <div class="custom-row__col max-width-lg custom-row__col--50per relative">
+          <div class="arrow-prev slick-arrow-prev">
+            <i class="fas fa-arrow-left"></i>
           </div>
-          <div class="custom-row__col custom-row__col--50per">
-            <div class="team-slider-photos slider-for">
-              <div class="team-slider-photos__photo">
-                <img src="images/dist/team/team1.png" alt="Mikhail Molokoedov">
-              </div>
-              <div class="team-slider-photos__photo">
-                <img src="images/dist/team/team2.png" alt="Roman Gods">
-              </div>
-              <div class="team-slider-photos__photo">
-                <img src="images/dist/team/team1.png" alt="Mikhail Molokoedov">
-              </div>
-              <div class="team-slider-photos__photo">
-                <img src="images/dist/team/team2.png" alt="Roman Gods">
-              </div>
-              <div class="team-slider-photos__photo">
-                <img src="images/dist/team/team1.png" alt="Mikhail Molokoedov">
-              </div>
-              <div class="team-slider-photos__photo">
-                <img src="images/dist/team/team2.png" alt="Roman Gods">
+          <div class="arrow-next slick-arrow-next">
+            <i class="fas fa-arrow-right"></i>
+          </div>
+          <div class="custom-row d-block-lg">
+            <div class="custom-row__col custom-row__col--50per">
+              <h3 class="title title-is7 text-uppercase">
+                <span class="primary-text">ABOUT</span> <br>
+                RCBI
+                <span class="primary-text">SOLUTIONS</span>
+              </h3>
+              <h2 class="title title-is3 text-uppercase team-title">
+                TEAM with 30+ year experience in IT and RCBI
+              </h2>
+            </div>
+            <div class="custom-row__col custom-row__col--50per w100-md">
+              <div class="team-slider-photos slider-for">
+                <div class="team-slider-photos__photo">
+                  <img src="images/dist/team/team1.png" alt="Mikhail Molokoedov">
+                </div>
+                <div class="team-slider-photos__photo">
+                  <img src="images/dist/team/team2.png" alt="Roman Gods">
+                </div>
+                <div class="team-slider-photos__photo">
+                  <img src="images/dist/team/team1.png" alt="Mikhail Molokoedov">
+                </div>
+                <div class="team-slider-photos__photo">
+                  <img src="images/dist/team/team2.png" alt="Roman Gods">
+                </div>
+                <div class="team-slider-photos__photo">
+                  <img src="images/dist/team/team1.png" alt="Mikhail Molokoedov">
+                </div>
+                <div class="team-slider-photos__photo">
+                  <img src="images/dist/team/team2.png" alt="Roman Gods">
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="custom-row">
-      <div class="custom-row__col"></div>
-      <div class="custom-row__col custom-row__col--75per">
-        <div class="team-slider-info slider-nav">
-          <div class="team-slider-info__details">
-            <span class="team-slider-info__name title title-is7">Mikhail <br>Molokoedov</span>
-            <p class="team-slider-info__desc">
-              has more than 30 years intense experience in IT. Was fully responsible  of technical departments in huge enterprises and global software development companies. For about 15 years Mikhail was involved in software development as a full-stack
-              programmer in different industries and variety of project sizes,
-              from mobile applications to complex IT systems. Utilizes his advanced IT knowledge in Universities as an educator.
-            </p>
+      <div class="custom-row">
+        <div class="custom-row__col hide-lg"></div>
+        <div class="custom-row__col custom-row__col--75per max-width-lg">
+          <div class="team-slider-info slider-nav">
+            <div class="team-slider-info__details">
+              <span class="team-slider-info__name title title-is7">Mikhail <br>Molokoedov</span>
+              <p class="team-slider-info__desc">
+                has more than 30 years intense experience in IT. Was fully responsible  of technical departments in huge enterprises and global software development companies. For about 15 years Mikhail was involved in software development as a full-stack
+                programmer in different industries and variety of project sizes,
+                from mobile applications to complex IT systems. Utilizes his advanced IT knowledge in Universities as an educator.
+              </p>
+            </div>
+            <div class="team-slider-info__details">
+              <span class="team-slider-info__name title title-is7">Roman <br>Gods</span>
+              <p class="team-slider-info__desc">
+                is experienced IT evangelist with 15-year background in the
+                field of business processes automatization. Used to work with Fortune 500 companies, was fully responsible of more than 100 successful digitalization projects. Roman is a founder of several SaaS products for corporate automatization and professional
+                adviser in the field of complex IT platforms
+                implementation.
+              </p>
+            </div>
+            <div class="team-slider-info__details">
+              <span class="team-slider-info__name title title-is7">Mikhail <br>Molokoedov</span>
+              <p class="team-slider-info__desc">
+                has more than 30 years intense experience in IT. Was fully responsible  of technical departments in huge enterprises and global software development companies. For about 15 years Mikhail was involved in software development as a full-stack
+                programmer in different industries and variety of project sizes,
+                from mobile applications to complex IT systems. Utilizes his advanced IT knowledge in Universities as an educator.
+              </p>
+            </div>
+            <div class="team-slider-info__details">
+              <span class="team-slider-info__name title title-is7">Roman <br>Gods</span>
+              <p class="team-slider-info__desc">
+                is experienced IT evangelist with 15-year background in the
+                field of business processes automatization. Used to work with Fortune 500 companies, was fully responsible of more than 100 successful digitalization projects. Roman is a founder of several SaaS products for corporate automatization and professional
+                adviser in the field of complex IT platforms
+                implementation.
+              </p>
+            </div>
+            <div class="team-slider-info__details">
+              <span class="team-slider-info__name title title-is7">Mikhail <br>Molokoedov</span>
+              <p class="team-slider-info__desc">
+                has more than 30 years intense experience in IT. Was fully responsible  of technical departments in huge enterprises and global software development companies. For about 15 years Mikhail was involved in software development as a full-stack
+                programmer in different industries and variety of project sizes,
+                from mobile applications to complex IT systems. Utilizes his advanced IT knowledge in Universities as an educator.
+              </p>
+            </div>
+            <div class="team-slider-info__details">
+              <span class="team-slider-info__name title title-is7">Roman <br>Gods</span>
+              <p class="team-slider-info__desc">
+                is experienced IT evangelist with 15-year background in the
+                field of business processes automatization. Used to work with Fortune 500 companies, was fully responsible of more than 100 successful digitalization projects. Roman is a founder of several SaaS products for corporate automatization and professional
+                adviser in the field of complex IT platforms
+                implementation.
+              </p>
+            </div>
           </div>
-          <div class="team-slider-info__details">
-            <span class="team-slider-info__name title title-is7">Roman <br>Gods</span>
-            <p class="team-slider-info__desc">
-              is experienced IT evangelist with 15-year background in the
-              field of business processes automatization. Used to work with Fortune 500 companies, was fully responsible of more than 100 successful digitalization projects. Roman is a founder of several SaaS products for corporate automatization and professional
-              adviser in the field of complex IT platforms
-              implementation.
-            </p>
+        </div>
+      </div>
+    </section>
+    <section class="testimonials-section">
+      <div class="custom-row">
+        <div class="custom-row__col"></div>
+        <div class="custom-row__col custom-row__col--50per max-width-lg relative">
+          <h2 class="title title-is3 text-uppercase testimonials-title">
+            Testimonials
+          </h2>
+          <div class="testimonials-slider">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="testimonial-slide">
+                  <div class="testimonial-slide__photo">
+                    <img src="images/dist/testimonial.png" alt="testimonial image">
+                  </div>
+                  <div class="testimonial-slide__info">
+                    <div class="testimonial-slide__info__heading">
+                      <div class="testimonial-author-info">
+                        <span class="title title-is-7 text-uppercase testimonial-info-text">John Doe</span>
+                        <span class="title title-is-7 text-uppercase testimonial-info-text">Manager</span>
+                      </div>
+                      <span class="title title-is-7 text-uppercase testimonial-info-text hide-mobile">19.04.2021</span>
+                    </div>
+                    <div class="testimonial-slide__info__text">
+                      <p>
+                        Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate
+                        eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae,
+                        eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis,
+                        feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.
+                      </p>
+                    </div>
+                    <span class="title title-is-7 text-uppercase testimonial-info-text show-mobile">19.04.2021</span>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="testimonial-slide">
+                  <div class="testimonial-slide__photo">
+                    <img src="images/dist/testimonial.png" alt="testimonial image">
+                  </div>
+                  <div class="testimonial-slide__info">
+                    <div class="testimonial-slide__info__heading">
+                      <div class="testimonial-author-info">
+                        <span class="title title-is-7 text-uppercase testimonial-info-text">John Doe</span>
+                        <span class="title title-is-7 text-uppercase testimonial-info-text">Manager</span>
+                      </div>
+                      <span class="title title-is-7 text-uppercase testimonial-info-text hide-mobile">19.04.2021</span>
+                    </div>
+                    <div class="testimonial-slide__info__text">
+                      <p>
+                        Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate
+                        eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae,
+                        eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis,
+                        feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.
+                      </p>
+                    </div>
+                    <span class="title title-is-7 text-uppercase testimonial-info-text show-mobile">19.04.2021</span>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="testimonial-video">
+                  <div id="video-cover" class="video-cover-before">
+                    <div class="testimonial-slide__info__heading">
+                      <div class="testimonial-author-info">
+                        <span class="title title-is-7 text-uppercase testimonial-info-text">John Doe</span>
+                        <span class="title title-is-7 text-uppercase testimonial-info-text">Manager</span>
+                      </div>
+                      <span class="title title-is-7 text-uppercase testimonial-info-text">19.04.2021</span>
+                    </div>
+                    <img src="images/dist/testimonial-video.png" alt="Video title">
+                  </div>
+                  <!--<iframe id="player" class="video-iframe" width="560" height="315" src="https://www.youtube.com/embed/XykrZ7j9JF4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>-->
+                  <button id="play" class="video-play-btn">
+                    <img src="images/dist/icon/play-green.svg" alt="play icon">
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="team-slider-info__details">
-            <span class="team-slider-info__name title title-is7">Mikhail <br>Molokoedov</span>
-            <p class="team-slider-info__desc">
-              has more than 30 years intense experience in IT. Was fully responsible  of technical departments in huge enterprises and global software development companies. For about 15 years Mikhail was involved in software development as a full-stack
-              programmer in different industries and variety of project sizes,
-              from mobile applications to complex IT systems. Utilizes his advanced IT knowledge in Universities as an educator.
-            </p>
+          <div class="testimonial-arrows-wrapper">
+            <div class="testimonials-slider-prev arrow-prev">
+              <div class=""></div>
+              <i class="fas fa-arrow-left"></i>
+            </div>
+            <div class="testimonials-slider-next arrow-next">
+              <i class="fas fa-arrow-right"></i>
+            </div>
           </div>
-          <div class="team-slider-info__details">
-            <span class="team-slider-info__name title title-is7">Roman <br>Gods</span>
-            <p class="team-slider-info__desc">
-              is experienced IT evangelist with 15-year background in the
-              field of business processes automatization. Used to work with Fortune 500 companies, was fully responsible of more than 100 successful digitalization projects. Roman is a founder of several SaaS products for corporate automatization and professional
-              adviser in the field of complex IT platforms
-              implementation.
+        </div>
+        <div class="custom-row__col"></div>
+      </div>
+    </section>
+  </section>
+</main>
+
+<footer class="main-footer" id="contacts">
+  <div class="custom-row d-block-lg">
+    <div class="custom-row__col w100-md"></div>
+    <div class="custom-row__col custom-row__col--50per max-width-lg">
+      <div class="custom-row d-block-lg">
+        <div class="custom-row__col custom-row__col--50per w100-md">
+          <h3 class="title title-is6 text-uppercase footer-title-sm">
+            RCBI Solutions is <span class="primary-text">software developer</span>
+            that helps RCBI Companies
+          </h3>
+          <form>
+            <div class="input-field input-field--required">
+              <input type="text" placeholder="Your name">
+              <div class="error-message">Error description</div>
+            </div>
+            <div class="input-field">
+              <input type="email" placeholder="E-mail">
+              <div class="error-message">Error description</div>
+            </div>
+            <div class="input-field">
+              <input type="tel" placeholder="Phone">
+              <div class="error-message">Error description</div>
+            </div>
+            <div class="input-select-wrapper">
+              <select class="input-select">
+                <option selected>Purpose</option>
+                <option value="theme1">Theme 1</option>
+                <option value="theme2">Theme 2</option>
+                <option value="theme3">Theme 3</option>
+                <option value="theme4">Theme 4</option>
+                <option value="theme5">Theme 5</option>
+              </select>
+            </div>
+            <div class="input-field">
+              <textarea placeholder="Message"></textarea>
+              <div class="error-message">Error description</div>
+            </div>
+            <div class="input-btn">
+              <button class="btn btn--primary">Send</button>
+            </div>
+          </form>
+        </div>
+        <div class="custom-row__col custom-row__col--50per w100-md">
+          <div class="contact-us">
+            <h3 class="title title-is3 text-uppercase contact-us-title">
+              CONTACT <br> US
+            </h3>
+            <p class="contact-us__addr">
+              Portugal, LISBON <br>
+              Rua Castilho 39, Loja 33, <br>
+              Edifício Castil, <br>
+              Lisboa 1250 - 096
             </p>
-          </div>
-          <div class="team-slider-info__details">
-            <span class="team-slider-info__name title title-is7">Mikhail <br>Molokoedov</span>
-            <p class="team-slider-info__desc">
-              has more than 30 years intense experience in IT. Was fully responsible  of technical departments in huge enterprises and global software development companies. For about 15 years Mikhail was involved in software development as a full-stack
-              programmer in different industries and variety of project sizes,
-              from mobile applications to complex IT systems. Utilizes his advanced IT knowledge in Universities as an educator.
-            </p>
-          </div>
-          <div class="team-slider-info__details">
-            <span class="team-slider-info__name title title-is7">Roman <br>Gods</span>
-            <p class="team-slider-info__desc">
-              is experienced IT evangelist with 15-year background in the
-              field of business processes automatization. Used to work with Fortune 500 companies, was fully responsible of more than 100 successful digitalization projects. Roman is a founder of several SaaS products for corporate automatization and professional
-              adviser in the field of complex IT platforms
-              implementation.
-            </p>
+            <a
+              href="mailto:info@rcbisolutions.com"
+              class="contact-us__email"
+            >
+              info@rcbisolutions.com
+            </a>
+            <div class="contact-us__socials">
+              <a href="#" class="contact-us__link">
+                <i class="fab fa-instagram-square"></i>
+              </a>
+              <a href="#" class="contact-us__link">
+                <i class="fab fa-facebook-square"></i>
+              </a>
+              <a href="#" class="contact-us__link">
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a href="#" class="contact-us__link">
+                <i class="fab fa-twitter-square"></i>
+              </a>
+            </div>
+            <div class="contact-us__copyright">
+              @<script>document.write(new Date().getFullYear())</script> - RCBI
+            </div>
+            <div class="contact-us__developed-by">
+              <a href="#">
+                <img src="../images/dist/fresh.png" target="_blank" alt="Fresh agency logo">
+              </a>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </section>
-</main>
+    <div class="custom-row__col"></div>
+  </div>
+</footer>
 
-	<script src="js/app.min.js"></script>
+<script src="js/app.min.js"></script>
 
 </body>
 </html>
