@@ -1,0 +1,55 @@
+.input-field {
+  position: relative;
+  margin-bottom: 25px;
+
+  input, textarea {
+    display: block;
+    width: 100%;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: rems(13);
+    letter-spacing: -.5px;
+    height: 50px;
+    padding: 15px 25px;
+    color: $white;
+    border-bottom: 1px solid $gray-border;
+
+    @include input-placeholder {
+      color: rgba($white, .5);
+    }
+  }
+
+  textarea {
+    min-height: 110px;
+    max-height: 210px;
+  }
+
+  .error-message {
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 25px;
+    color: $pink;
+    display: none;
+    font-size: rems(13);
+  }
+
+  &--required {
+    input, textarea {
+      border-color: $pink;
+      color: $pink;
+
+      @include input-placeholder {
+        color: $pink;
+      }
+    }
+
+    .error-message {
+      display: block;
+    }
+  }
+}
+
+.input-select-wrapper {
+  margin-bottom: 25px;
+}

@@ -1,0 +1,238 @@
+// Input select
+.selectric-input-select {
+  &.selectric-open {
+    .selectric {
+      .button {
+        transform: scaleY(-1) translateY(-3px);
+      }
+    }
+  }
+
+  .selectric, .selectric-items {
+    background: none;
+    border: none;
+  }
+
+  .selectric {
+    font-family: $userfont;
+    border-bottom: 1px solid $gray-border;
+
+    .label {
+      height: 50px;
+      font-size: rems(13);
+      line-height: 50px;
+      letter-spacing: -.5px;
+      color: rgba($white, .5);
+      margin: 0 25px;
+
+      &.active {
+        color: $white;
+
+        + .button {
+          &:after {
+            border-color: $white;
+          }
+        }
+      }
+    }
+
+    .button {
+      background: none;
+      height: 50px;
+      @include transition(.2s, transform);
+
+      &:after {
+        border: none;
+        border-left: 2px solid rgba($white, .5);
+        border-bottom: 2px solid rgba($white, .5);
+        width: 8px;
+        height: 8px;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  .selectric-items {
+    box-shadow: none;
+    background: $gray;
+
+    ul {
+      padding: 15px 0;
+
+      li {
+        font-size: rems(13);
+        line-height: 1.1;
+        letter-spacing: -.5px;
+        color: rgba($black, .5);
+        padding: 5px 25px;
+        @include transition(.2s, color);
+
+        &:hover {
+          background: none;
+          color: $black;
+        }
+
+        &.highlighted {
+          display: none;
+        }
+
+        &.selected {
+          background: none;
+        }
+      }
+    }
+  }
+}
+
+// Lang select
+#select-lang {
+  &.dark-theme {
+    .selectric-select-lang {
+      .selectric {
+        .label {
+          color: $black;
+        }
+
+        .button {
+          &:after {
+            border-color: $black;
+          }
+        }
+      }
+
+      .selectric-items {
+        ul {
+          li {
+            color: $black;
+
+            &:hover {
+              color: $white;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.white-theme {
+    .selectric-select-lang {
+      .selectric {
+        .label {
+          color: $white;
+        }
+
+        .button {
+          &:after {
+            border-color: $white;
+          }
+        }
+      }
+
+      .selectric-items {
+        ul {
+          li {
+            color: $white;
+
+            &:hover {
+              color: $primary;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.selectric-select-lang {
+  &.selectric-open {
+    .selectric {
+      .button {
+        transform: scaleY(-1) translateY(-3px);
+      }
+    }
+  }
+
+  .selectric, .selectric-items {
+    background: none;
+    border: none;
+  }
+
+  .selectric {
+    font-family: $userfont;
+
+    .label {
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: rems(18);
+      line-height: 1.1;
+      letter-spacing: -.5px;
+      color: $black;
+      height: auto;
+      @include transition(.2s, color);
+
+      @media (max-width: 1600px) {
+        color: $white;
+      }
+    }
+
+    .button {
+      background: none;
+      height: 19px;
+      @include transition(.2s, transform);
+
+      &:after {
+        border: none;
+        border-left: 2px solid $black;
+        border-bottom: 2px solid $black;
+        width: 8px;
+        height: 8px;
+        transform: rotate(-45deg);
+        @include transition(.2s, border-color);
+
+        @media (max-width: 1600px) {
+          border-color: $white;
+        }
+      }
+    }
+  }
+
+  .selectric-items {
+    box-shadow: none;
+
+    ul {
+      padding: 5px 0;
+
+      li {
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: rems(18);
+        line-height: 1.1;
+        letter-spacing: -.5px;
+        color: $black;
+        padding: 5px 10px;
+        @include transition(.2s, color);
+
+        @media (max-width: 1600px) {
+          color: $white;
+        }
+
+        &:hover {
+          background: none;
+          color: $white;
+
+          @media (max-width: 1600px) {
+            color: $primary;
+          }
+        }
+
+        &.highlighted {
+          display: none;
+        }
+
+        &.selected {
+          background: none;
+        }
+      }
+    }
+  }
+}

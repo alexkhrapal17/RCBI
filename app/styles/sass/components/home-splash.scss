@@ -9,9 +9,21 @@
   flex-direction: column;
   justify-content: flex-end;
 
+  @media (max-width: $screen-md) {
+    min-height: 100vh;
+    height: auto;
+    padding: 50px;
+    background-image: url('../images/dist/scene.png');
+  }
+
   &__content {
     flex-basis: 395px;
     max-width: 395px;
+
+    @media (max-width: 1366px) {
+      flex-basis: unset;
+      max-width: 700px;
+    }
 
     .title {
       letter-spacing: -2.4px;
@@ -33,6 +45,10 @@
   bottom: 0;
   left: 0;
   z-index: -99;
+
+  @media (max-width: $screen-md) {
+    display: none;
+  }
 
   .video-foreground, iframe {
     position: absolute;

@@ -21,12 +21,9 @@
 
 </head>
 <body>
-	<div class="lines">
-		<div class="custom-row">
-			<div class="custom-row__col"></div>
-			<div class="custom-row__col"></div>
-			<div class="custom-row__col"></div>
-			<div class="custom-row__col"></div>
+	<div class="scroll-up">
+		<div class="arrow-prev arrow-up">
+			<i class="fas fa-arrow-up"></i>
 		</div>
 	</div>
 	<header class="main-header">
@@ -38,18 +35,39 @@
 		<div class="main-header__nav">
 			<div class="wrapper">
 				<nav class="main-nav">
-					<a href="#" class="main-nav__link">Home</a>
-					<a href="#" class="main-nav__link">About us</a>
-					<a href="#" class="main-nav__link">Products</a>
-					<a href="#" class="main-nav__link">Contact</a>
+					<a href="#" class="main-nav__link homepage-link">Home</a>
+					<a href="#aboutus" class="main-nav__link about-us-link">About us</a>
+					<a href="#products" class="main-nav__link products-link">Products</a>
+					<a href="#footer" class="main-nav__link footer-link">Contact</a>
 				</nav>
+			</div>
+			<div class="contact-us__socials show-mobile">
+				<a href="#" class="contact-us__link">
+					<i class="fab fa-instagram-square"></i>
+				</a>
+				<a href="#" class="contact-us__link">
+					<i class="fab fa-facebook-square"></i>
+				</a>
+				<a href="#" class="contact-us__link">
+					<i class="fab fa-linkedin"></i>
+				</a>
+				<a href="#" class="contact-us__link">
+					<i class="fab fa-twitter-square"></i>
+				</a>
 			</div>
 		</div>
 		<div class="main-header__lang">
-			<select class="select-lang">
-				<option value="ru">Ru</option>
-				<option value="en">En</option>
-				<option value="ch">Ch</option>
-			</select>
+			<div id="select-lang">
+				<select class="select-lang">
+					<option value="ru">Ru</option>
+					<option value="en">En</option>
+					<option value="ch">Ch</option>
+				</select>
+			</div>
+		</div>
+		<div class="mobile-toggle">
+			<span class="line1"></span>
+			<span class="line2"></span>
+			<span class="line3"></span>
 		</div>
 	</header>

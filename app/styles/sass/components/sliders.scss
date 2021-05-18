@@ -5,6 +5,10 @@
       .products-slider-next {
         right: 30px;
         left: auto;
+
+        @media (max-width: 1600px) {
+          right: 0;
+        }
       }
     }
   }
@@ -13,6 +17,10 @@
   height: 50vh;
   min-height: 330px;
   position: relative;
+
+  @media (max-width: 1600px) {
+    height: 400px;
+  }
 
   .swiper-wrapper {
     .swiper-slide {
@@ -174,6 +182,10 @@
           visibility: hidden;
           @include transition(.3s, all);
 
+          @media (max-width: 1600px) {
+            padding: 50px;
+          }
+
           .title {
             display: block;
             text-transform: uppercase;
@@ -189,6 +201,10 @@
             opacity: 0;
             visibility: hidden;
             @include transition(.3s .1s, all);
+
+            @media (max-width: 1600px) {
+              margin: 30px 0 50px;
+            }
           }
 
           &__btn {
@@ -231,23 +247,44 @@
 
   .products-slider-prev {
     left: 30px;
+
+    @media (max-width: 1600px) {
+      left: 0;
+    }
   }
 
   .products-slider-next {
     right: auto;
     left: calc(25% - 80px);
-    @include transition(.2s, left)
+    @include transition(.2s, left);
+
+    @media (max-width: 1600px) {
+      left: calc(25% - 50px);
+    }
+
+    @media (max-width: $screen-md) {
+      left: auto;
+      right: 0;
+    }
   }
 }
 
 // Team slider
 .team-slider-photos {
+  @media (max-width: $screen-sm) {
+    margin: 0 -50px;
+  }
+
   &__photo {
     display: flex !important;
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
     min-height: 591px;
+
+    @media (max-width: $screen-md) {
+      min-height: unset;
+    }
 
     img {
       max-width: 100%;
@@ -266,6 +303,11 @@
     position: relative;
     cursor: grab;
     @include transition(.3s, opacity);
+
+    @media (max-width: $screen-md) {
+      min-height: unset;
+      padding-bottom: 50px;
+    }
 
     &:active {
       cursor: grabbing;
@@ -301,6 +343,10 @@
     letter-spacing: 3px;
     min-height: 36px;
     margin-bottom: 40px;
+
+    @media (max-width: $screen-md) {
+      padding-right: 130px;
+    }
   }
 
   &__desc {
@@ -313,14 +359,203 @@
 .slick-arrow-next {
   position: absolute;
   top: 190px;
+
+  @media (max-width: $screen-lg) {
+    top: 50%;
+  }
+
+  @media (max-width: $screen-md) {
+    top: auto;
+    bottom: 0;
+    z-index: 1;
+  }
 }
 
 .slick-arrow-prev {
   left: -100px;
+
+  @media (max-width: $screen-lg) {
+    left: 7px;
+  }
+
+  @media (max-width: $screen-md) {
+    left: auto;
+    right: 115px;
+  }
 }
 
 .slick-arrow-next {
   right: -100px;
+
+  @media (max-width: $screen-lg) {
+    right: 7px;
+  }
+
+  @media (max-width: $screen-md) {
+    right: 50px;
+  }
+}
+
+// Testimonials slider
+.testimonials-slider {
+  position: relative;
+  z-index: 10;
+  margin-left: -1px;
+  overflow: hidden;
+}
+
+.testimonial-slide {
+  background: $dark;
+  padding: 60px;
+  display: flex;
+  min-height: 300px;
+
+  @media (max-width: $screen-md) {
+    display: block;
+    padding: 60px 50px;
+  }
+
+  &__photo {
+    width: 140px;
+    margin-right: 80px;
+
+    @media (max-width: $screen-md) {
+      width: 100%;
+      text-align: center;
+      margin: 0 auto 60px auto;
+    }
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &__info {
+    flex: 1;
+
+    &__heading {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 30px;
+    }
+
+    &__text {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.testimonial-info-text {
+  display: block;
+  margin-bottom: 10px;
+  letter-spacing: 3.14px;
+}
+
+.testimonial-video {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 56.25%;
+
+  @media (max-width: $screen-md) {
+    height: 550px;
+  }
+
+  .video-cover-before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+
+    img {
+      @include img-cover(top center)
+    }
+
+    .testimonial-slide__info__heading {
+      position: absolute;
+      top: 32px;
+      left: 32px;
+      right: 32px;
+
+      @media (max-width: $screen-md) {
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        bottom: 32px;
+        margin-bottom: 0;
+
+        .testimonial-info-text {
+          font-size: rems(14);
+        }
+      }
+    }
+  }
+
+  .video-play-btn {
+    @include center(both);
+    z-index: 15;
+    cursor: pointer;
+    background: none;
+    padding: 0;
+    border: none;
+    @include transition(.2s, transform);
+
+    &:hover {
+      transform: translate(-50%, -50%) scale(1.04);
+    }
+  }
+
+  .video-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.testimonial-arrows-wrapper {
+  @media (max-width: $screen-md) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+
+    .testimonials-slider-prev,
+    .testimonials-slider-next {
+      margin: 0 4px;
+    }
+  }
+}
+
+.testimonials-slider-prev,
+.testimonials-slider-next {
+  position: absolute;
+  top: 240px;
+  z-index: 10;
+
+  @media (max-width: $screen-md) {
+    @include reset-position;
+  }
+}
+
+.testimonials-slider-prev {
+  left: -100px;
+
+  @media (max-width: $screen-lg) {
+    left: 7px;
+  }
+}
+
+.testimonials-slider-next {
+  right: -100px;
+
+  @media (max-width: $screen-lg) {
+    right: 7px;
+  }
 }
 
 // Arrow styles
@@ -359,6 +594,36 @@
     svg {
       animation: wobble-left .7s ease-in-out 1;
     }
+  }
+}
+
+.arrow-up {
+  &:hover {
+    svg {
+      animation: wobble-top .7s ease-in-out 1;
+    }
+  }
+}
+
+@keyframes wobble-top {
+  20% {
+    transform: translateY(2px);
+  }
+
+  40% {
+    transform: translateY(-2px);
+  }
+
+  60% {
+    transform: translateY(1px);
+  }
+
+  80% {
+    transform: translateY(-1px);
+  }
+
+  100% {
+    transform: translateY(0);
   }
 }
 

@@ -4,8 +4,25 @@
   margin-bottom: -100vh;
   @include transition(.5s, transform);
 
+  @media (max-width: 1600px) {
+    transform: translate(100%, -100vh);
+  }
+
+  @media (max-width: $screen-md) {
+    transform: none;
+    margin-bottom: 0;
+  }
+
   &.slide {
     transform: translate(0, -100vh);
+
+    @media (max-width: 1600px) {
+      transform: translate(0, -100vh);
+    }
+
+    @media (max-width: $screen-md) {
+      transform: none;
+    }
   }
 }
 
@@ -13,9 +30,43 @@
 .about-section {
   background: $gradient;
 
+  @media (max-width: $screen-md) {
+    padding: 85px 50px 50px;
+  }
+
+  .custom-row {
+    @media (max-width: $screen-md) {
+      display: block;
+    }
+
+    &__col {
+      @media (max-width: 1366px) {
+        width: 33.33%;
+      }
+
+      @media (max-width: $screen-md) {
+        width: 100%;
+      }
+    }
+  }
+
   &__info {
     padding: 120px 70px 20px;
     min-height: 50vh;
+
+    @media (max-width: 1670px) {
+      padding: 120px 30px 20px;
+    }
+
+    @media (max-width: 1600px) {
+      padding: 90px 30px 50px;
+      min-height: unset;
+    }
+
+    @media (max-width: $screen-md) {
+      padding: 0;
+      margin-bottom: 35px;
+    }
   }
 
   &__text {
@@ -32,16 +83,53 @@
   background: $dark;
   min-height: 50vh;
   overflow: hidden;
+
+  @media (max-width: 1600px) {
+    min-height: unset;
+  }
+}
+
+.team-testimonials-wrapper {
+  @media (max-width: 1366px) {
+    background: $black;
+    position: relative;
+    z-index: 15;
+  }
 }
 
 // Our team section
 .team-section {
   padding: 115px 0;
+
+  @media (max-width: $screen-lg) {
+    > .custom-row {
+      display: block;
+    }
+  }
+
+  @media (max-width: $screen-md) {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 65px 0;
+  }
 }
 
 .team-title {
   max-width: 320px;
   margin-top: 165px;
   letter-spacing: -1.5px;
+
+  @media (max-width: $screen-md) {
+    display: none;
+  }
 }
 
+// Testimonials section
+.testimonials-section {
+  padding-bottom: 50px;
+  position: relative;
+}
+
+.testimonials-title {
+  margin-bottom: 70px;
+}

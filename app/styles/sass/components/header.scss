@@ -10,8 +10,28 @@
   min-height: 120px;
   padding: 35px 35px 35px 70px;
 
+  @media (max-width: 1600px) {
+    padding: 20px 30px;
+    min-height: 90px;
+  }
+
+  @media (max-width: $screen-md) {
+    background: $black;
+    padding: 0 0 0 20px;
+    justify-content: space-between;
+  }
+
+  &.dark-space {
+    // add styles
+  }
+
   &__logo {
     flex-basis: 423px;
+
+    @media (max-width: $screen-md) {
+      order: 1;
+      flex-basis: unset;
+    }
 
     a {
       display: block;
@@ -20,12 +40,78 @@
 
   &__nav {
     flex-basis: 970px;
+
+    @media (max-width: $screen-md) {
+      position: absolute;
+      top: 90px;
+      right: 0;
+      width: 100%;
+      height: calc(100vh - 90px);
+      background: $black;
+      flex-basis: unset;
+      opacity: 0;
+      visibility: hidden;
+      @include transition(.3s, all);
+
+      &.active {
+        opacity: 1;
+        visibility: visible;
+
+        .main-nav {
+          &__link {
+            animation: fadeInRight .5s ease forwards;
+            animation-delay: .35s;
+
+            &:nth-of-type(2) {
+              animation-delay: .4s;
+            }
+
+            &:nth-of-type(3) {
+              animation-delay: .45s;
+            }
+
+            &:nth-of-type(4) {
+              animation-delay: .50s;
+            }
+
+            &:nth-of-type(5) {
+              animation-delay: .55s;
+            }
+
+            &:nth-of-type(6) {
+              animation-delay: .60s;
+            }
+          }
+        }
+      }
+    }
+
+    @media (max-width: $screen-md) {
+      order: 3;
+    }
+
+    .wrapper {
+      @media (max-width: $screen-md) {
+        position: static;
+        height: calc(100% - 90px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+    }
   }
 
   &__lang {
     flex-basis: 423px;
     display: flex;
     justify-content: flex-end;
+
+    @media (max-width: $screen-md) {
+      order: 2;
+      flex-basis: unset;
+      margin-left: auto;
+    }
   }
 }
 
@@ -34,6 +120,12 @@
   justify-content: flex-end;
   align-items: center;
   margin-right: 35px;
+
+  @media (max-width: $screen-md) {
+    display: block;
+    margin-right: 0;
+    text-align: center;
+  }
 
   &__link {
     display: block;
@@ -44,8 +136,16 @@
     text-decoration: none;
     text-transform: uppercase;
     margin: 0 26px;
+    cursor: pointer;
     user-select: none;
     @include transition(.2s, color);
+
+    @media (max-width: $screen-md) {
+      margin: 10px 0;
+      font-size: rems(60);
+      font-weight: 700;
+      opacity: 0;
+    }
 
     &:hover {
       color: $primary;
@@ -62,78 +162,89 @@
   }
 }
 
-.selectric-select-lang {
-  &.selectric-open {
-    .selectric {
-      .button {
-        transform: scaleY(-1) translateY(-3px);
+.scroll-up {
+  position: fixed;
+  bottom: 70px;
+  left: 60px;
+  z-index: 10;
+  cursor: pointer;
+  @include transition(.2s, all);
+
+  @media (max-width: $screen-lg) {
+    bottom: 30px;
+    left: 30px;
+  }
+
+  &.hide {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.mobile-toggle {
+  width: 90px;
+  height: 90px;
+  margin-left: 10px;
+  background: $primary;
+  order: 4;
+  position: relative;
+  cursor: pointer;
+  display: none;
+
+  @media (max-width: $screen-md) {
+    display: block;
+  }
+
+  &.active {
+    span {
+      &.line1 {
+        transform: rotate(45deg);
+        top: 42px;
       }
-    }
-  }
 
-  .selectric, .selectric-items {
-    background: none;
-    border: none;
-  }
+      &.line2 {
+        opacity: 0;
+        transform: translateX(10px);
+      }
 
-  .selectric {
-    font-family: $userfont;
-
-    .label {
-      text-transform: uppercase;
-      font-weight: 600;
-      font-size: rems(18);
-      line-height: 1.1;
-      letter-spacing: -.5px;
-      color: $white;
-      height: auto;
-    }
-
-    .button {
-      background: none;
-      height: 19px;
-      @include transition(.2s, transform);
-
-      &:after {
-        border: none;
-        border-left: 2px solid $white;
-        border-bottom: 2px solid $white;
-        width: 8px;
-        height: 8px;
+      &.line3 {
         transform: rotate(-45deg);
+        bottom: 42px;
       }
     }
   }
 
-  .selectric-items {
-    box-shadow: none;
+  span {
+    position: absolute;
+    left: 50%;
+    margin: 2px 0 2px -13px;
+    width: 26px;
+    height: 2px;
+    background: $black;
+    @include transition(.2s, all);
 
-    ul {
-      padding: 5px 0;
-
-      li {
-        text-transform: uppercase;
-        font-weight: 600;
-        font-size: rems(18);
-        line-height: 1.1;
-        letter-spacing: -.5px;
-        color: $white;
-        padding: 5px 10px;
-        @include transition(.2s, color);
-
-        &:hover {
-          background: none;
-          color: $primary;
-        }
-
-        &.highlighted {
-          display: none;
-        }
-
-        &.selected {
-          background: none;
-        }
-      }
+    &.line1 {
+      top: 35px;
     }
+
+    &.line2 {
+      top: 42px;
+    }
+
+    &.line3 {
+      bottom: 35px;
+    }
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
   }
 }

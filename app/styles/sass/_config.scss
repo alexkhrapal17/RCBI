@@ -22,7 +22,6 @@ body {
 }
 
 main {
-  height: 10000px;
   background: $black;
   position: relative;
   z-index: 1;
@@ -42,8 +41,32 @@ main {
 .custom-row {
   display: flex;
 
+  &.d-block-lg {
+    @media (max-width: $screen-md) {
+      display: block;
+    }
+  }
+
   &__col {
     width: 25%;
+
+    &.w100-lg {
+      @media (max-width: $screen-lg) {
+        width: 100%;
+      }
+    }
+
+    &.w100-md {
+      @media (max-width: $screen-md) {
+        width: 100%;
+      }
+    }
+
+    &.hide-lg {
+      @media (max-width: $screen-lg) {
+        display: none;
+      }
+    }
 
     &--50per {
       width: 50%;
@@ -52,6 +75,34 @@ main {
     &--75per {
       width: 75%;
     }
+
+    &.max-width-lg {
+      @media (max-width: $screen-lg) {
+        width: auto;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 0 75px;
+      }
+
+      @media (max-width: $screen-md) {
+        padding: 0 50px;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.show-mobile {
+  display: none !important;
+
+  @media (max-width: $screen-md) {
+    display: flex !important;
+  }
+}
+
+.hide-mobile {
+  @media (max-width: $screen-md) {
+    display: none !important;
   }
 }
 
@@ -63,11 +114,23 @@ main {
   z-index: 10;
   pointer-events: none;
 
+  @media (max-width: $screen-md) {
+    display: none;
+  }
+
   .custom-row {
     &__col {
       position: relative;
 
+      @media (max-width: 1366px) {
+        width: 33.33%;
+      }
+
       &:last-child {
+        @media (max-width: 1366px) {
+          display: none;
+        }
+
         &:after {
           display: none;
         }

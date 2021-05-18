@@ -19,6 +19,10 @@ h1, h2, h3, h4, h5, h6 {
   &.title-is1 {
     font-size: rems(72);
     font-weight: 700;
+
+    @media (max-width: $screen-md) {
+      font-size: rems(60);
+    }
   }
 
   &.title-is2 {
@@ -49,5 +53,14 @@ h1, h2, h3, h4, h5, h6 {
 
   &.title-is8 {
     font-size: rems(14);
+  }
+}
+
+a {
+  color: $primary;
+  text-decoration: none;
+
+  &:hover {
+    color: $primary;
   }
 }
