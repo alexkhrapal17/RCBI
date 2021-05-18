@@ -145,26 +145,50 @@ document.addEventListener('DOMContentLoaded', () => {
     // Scroll nav
     $('.about-us-link').on('click', function(e) {
         $('.slide-section').addClass('slide');
-        $('html, body').animate({
-            scrollTop: $("#slide").offset().top + 1
-        }, 700);
+
+        if ($(window).width() > 992) {
+            $('html, body').animate({
+                scrollTop: $("#slide").offset().top + 1
+            }, 700);
+        } else {
+            $('html, body').animate({
+                scrollTop: $("#slide").offset().top - 90
+            }, 700);
+        }
     });
+
     $('.homepage-link').on('click', function(e) {
         $('html, body').animate({
             scrollTop: $("body").offset().top
         }, 700);
     });
+
     $('.footer-link').on('click', function(e) {
-        $('html, body').animate({
-            scrollTop: $("#contacts").offset().top
-        }, 700);
+        if ($(window).width() > 992) {
+            $('html, body').animate({
+                scrollTop: $("#contacts").offset().top
+            }, 700);
+        } else {
+            $('html, body').animate({
+                scrollTop: $("#contacts").offset().top - 90
+            }, 700);
+        }
+
     });
+
     $('.products-link').on('click', function(e) {
         $('.slide-section').addClass('slide');
-        $('html, body').animate({
-            scrollTop: $("#products").offset().top
-        }, 700);
+        if ($(window).width() > 992) {
+            $('html, body').animate({
+                scrollTop: $("#products").offset().top
+            }, 700);
+        } else {
+            $('html, body').animate({
+                scrollTop: $("#products").offset().top - 90
+            }, 700);
+        }
     });
+
     $('.scroll-up').on('click', function(e) {
         $('html, body').animate({
             scrollTop: $("body").offset().top
@@ -192,5 +216,12 @@ document.addEventListener('DOMContentLoaded', () => {
     $('.mobile-toggle').on('click', function () {
        $(this).toggleClass('active');
        $('.main-header__nav').toggleClass('active');
+       $('body').toggleClass('hidden');
+    });
+
+    $('.main-nav__link').on('click', function () {
+        $('.mobile-toggle').removeClass('active');
+       $('.main-header__nav').removeClass('active');
+       $('body').removeClass('hidden');
     });
 })

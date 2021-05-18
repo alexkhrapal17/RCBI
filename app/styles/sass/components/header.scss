@@ -50,7 +50,9 @@
       background: $black;
       flex-basis: unset;
       opacity: 0;
+      overflow: auto;
       visibility: hidden;
+      padding: 0 15px 50px;
       @include transition(.3s, all);
 
       &.active {
@@ -98,6 +100,11 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+      }
+
+      @media (orientation: landscape) {
+        height: auto;
+        margin-bottom: 50px;
       }
     }
   }
@@ -173,6 +180,10 @@
   @media (max-width: $screen-lg) {
     bottom: 30px;
     left: 30px;
+  }
+
+  @media (max-width: $screen-md) {
+    display: none;
   }
 
   &.hide {
