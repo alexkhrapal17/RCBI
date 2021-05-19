@@ -1,3 +1,11 @@
+.product-main-wrapper {
+  @media (max-width: 1366px) {
+    background: $black;
+    position: relative;
+    z-index: 15;
+  }
+}
+
 .product-splash {
   min-height: 100vh;
   padding: 190px 0 0;
@@ -6,13 +14,49 @@
   background-repeat: no-repeat;
   background-position: center;
 
+  @media (max-width: $screen-md) {
+    padding: 150px 0 0;
+  }
+
   &__heading, &__videos {
     min-height: calc(50vh - 190px);
   }
 
   &__heading {
+    @media (max-width: 1366px) {
+      .custom-row {
+        &__col {
+          width: 33.33%;
+
+          &:nth-child(2) {
+            display: none;
+          }
+        }
+      }
+    }
+
+    @media (max-width: $screen-md) {
+      padding-bottom: 30px;
+
+      .custom-row {
+        display: block;
+
+        &__col {
+          width: 100%;
+        }
+      }
+    }
+
     &__content {
       padding: 0 70px 50px;
+
+      @media (max-width: $screen-md) {
+        padding: 0 50px 50px;
+      }
+
+      @media (max-width: $screen-xxs) {
+        padding: 0 20px 50px;
+      }
 
       p {
         letter-spacing: .5px;
@@ -23,6 +67,7 @@
 
   &__videos {
     min-height: 50vh;
+    position: relative;
   }
 }
 
@@ -51,6 +96,10 @@
 // Benefits section
 .benefits-section {
   padding: 115px 0;
+
+  @media (max-width: $screen-md) {
+    padding: 80px 0;
+  }
 }
 
 .benefits-title {
@@ -65,6 +114,11 @@
     width: 50%;
     padding-right: 140px;
     margin-bottom: 55px;
+
+    @media (max-width: $screen-md) {
+      width: 100%;
+      padding-right: 0;
+    }
 
     &__icon {
       height: 50px;
@@ -96,11 +150,32 @@
   display: flex;
   flex-wrap: wrap;
 
+  @media (max-width: $screen-md) {
+    justify-content: center;
+  }
+
   .gallery-item {
     display: block;
     width: 25%;
     min-height: 485px;
     position: relative;
+
+    @media (max-width: 1600px) {
+      min-height: 380px;
+    }
+
+    @media (max-width: 1366px) {
+      width: 33.33%;
+      min-height: 485px;
+    }
+
+    @media (max-width: $screen-md) {
+      width: 50%;
+    }
+
+    @media (max-width: $screen-sm) {
+      width: 100%;
+    }
 
     &:hover {
       &:after {
@@ -141,6 +216,10 @@
     }
 
     &--load-more {
+      @media (max-width: $screen-md) {
+        display: none;
+      }
+
       .arrow-next {
         @include center(both);
         color: $white;
@@ -155,32 +234,59 @@
   }
 }
 
-.dark-item {
+.dark-item, .dark-item2x {
   background: $black;
   width: 25%;
-}
 
-.dark-item2x {
-  background: $black;
-  width: 25%;
+  @media (max-width: 1366px) {
+    width: 33.33%;
+  }
+
+  @media (max-width: $screen-md) {
+    display: none;
+  }
 }
 
 // Packages section
 .packages-section {
   background: $gradient;
   padding: 80px 0 105px;
+
+  @media (max-width: $screen-xxs) {
+    padding: 60px 0 80px;
+  }
+
+  @media (max-width: $screen-sm) {
+    .max-width-lg {
+      padding: 0;
+    }
+  }
 }
 
 .packages-title {
   margin-bottom: 60px;
+
+  @media (max-width: $screen-sm) {
+    text-align: center;
+  }
 }
 
 .packages-list {
   display: flex;
   margin: 0 -2px;
 
+  @media (max-width: $screen-sm) {
+    display: block;
+    margin: 0;
+  }
+
   .request-btn {
     margin: 2px 2px -2px;
+
+    @media (max-width: $screen-sm) {
+      padding: 0 90px;
+      margin: 2px 2px 0;
+    }
   }
 
   &__item {
@@ -191,6 +297,7 @@
     min-height: 320px;
     padding: 70px 25px;
     position: relative;
+
 
     .btn {
       position: absolute;
@@ -224,10 +331,19 @@
 
   &__col-sm {
     width: 25%;
+
+    @media (max-width: $screen-sm) {
+      width: 100%;
+      padding: 0 90px;
+    }
   }
 
   &__col-lg {
     width: 75%;
+
+    @media (max-width: $screen-sm) {
+      width: 100%;
+    }
 
     &__row {
       display: flex;

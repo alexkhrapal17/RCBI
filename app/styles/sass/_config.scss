@@ -158,3 +158,32 @@ main {
     }
   }
 }
+
+// Thanks page
+.thank-you-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 150px 0;
+
+  @media (max-width: $screen-md) {
+    justify-content: flex-end;
+  }
+
+  .wrapper {
+    width: 900px;
+
+    @media (max-width: 900px) {
+      width: 100%;
+    }
+
+    .title {
+      margin-bottom: 40px;
+
+      @media (max-width: $screen-md) {
+        font-size: 48px;
+      }
+    }
+  }
+}

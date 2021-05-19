@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title><!--#echo var="title" --></title>
+	<meta name="description" content="RCBI description">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<link rel="icon" href="images/favicon.png">
+	<meta property="og:image" content="images/dist/OG.jpg">
+
+	<!-- FONTS -->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+	
+	<link rel="stylesheet" href="css/main.min.css">
+
+</head>
+<body>
+	<div class="scroll-up">
+		<div class="arrow-prev arrow-up">
+			<i class="fas fa-arrow-up"></i>
+		</div>
+	</div>
+	<header class="main-header">
+		<div class="main-header__logo">
+			<a href="index.html">
+				<img src="../images/dist/logo.svg" alt="RCBI logo">
+			</a>
+		</div>
+		<div class="main-header__nav">
+			<div class="wrapper">
+				<nav class="main-nav">
+					<a href="../index.html" class="main-nav__link homepage-link">Home</a>
+					<a href="../index.html#aboutus" class="main-nav__link about-us-link">About us</a>
+					<a href="../index.html#products" class="main-nav__link products-link">Products</a>
+					<a href="../index.html#contacts" class="main-nav__link footer-link">Contact</a>
+				</nav>
+			</div>
+			<div class="contact-us__socials show-mobile">
+				<a href="#" class="contact-us__link">
+					<i class="fab fa-instagram-square"></i>
+				</a>
+				<a href="#" class="contact-us__link">
+					<i class="fab fa-facebook-square"></i>
+				</a>
+				<a href="#" class="contact-us__link">
+					<i class="fab fa-linkedin"></i>
+				</a>
+				<a href="#" class="contact-us__link">
+					<i class="fab fa-twitter-square"></i>
+				</a>
+			</div>
+		</div>
+		<div class="main-header__lang">
+			<!-- TODO: Remove class="white-theme" for Home page (only!) -->
+			<div id="select-lang" class="white-theme">
+				<select class="select-lang">
+					<option value="ru">Ru</option>
+					<option value="en">En</option>
+					<option value="ch">Ch</option>
+				</select>
+			</div>
+		</div>
+		<div class="mobile-toggle">
+			<span class="line1"></span>
+			<span class="line2"></span>
+			<span class="line3"></span>
+		</div>
+	</header>

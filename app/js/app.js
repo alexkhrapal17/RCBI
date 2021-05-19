@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     lightGallery(document.getElementById('product-videos'), {
         plugins: [lgVideo],
+        preload: false,
         autoplayFirstVideo: true,
         download: false,
     });
@@ -58,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
         breakpoints: {
             // when window width is >= 992px
             992: {
-                slidesPerView: 1
+                slidesPerView: 3
             },
             // when window width is >= 1367
             1367: {
@@ -73,16 +74,13 @@ document.addEventListener('DOMContentLoaded', () => {
         slidesToScroll: 1,
         dots: false,
         speed: 300,
-        centerMode: true,
-        centerPadding: '0',
         prevArrow: $('.products-slider-prev'),
         nextArrow: $('.products-slider-next'),
-        focusOnSelect: true,
         responsive: [
             {
-                breakpoint: 1200,
+                breakpoint: 1367,
                 settings: {
-                    slidesToShow: 2,
+                    slidesToShow: 3,
                     slidesToScroll: 1,
                 }
             },
@@ -109,6 +107,19 @@ document.addEventListener('DOMContentLoaded', () => {
             prevEl: '.testimonials-slider-prev',
         },
     });
+
+    // Slider Packages mobile
+    if ($(window).width() < 768) {
+        $('.packages-list__col-lg__row').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: false,
+            arrows: false,
+            centerMode: true,
+            centerPadding: '90px',
+            adaptiveHeight: true,
+        });
+    }
 
     // Slider Team
     $('.slider-for').slick({
@@ -161,90 +172,7 @@ document.addEventListener('DOMContentLoaded', () => {
         $('.video-play-btn').hide();
     })
 
-    // Scroll nav
-    if ($(window).width() < 992) {
-        $('.activate-slide').on('click', function (e) {
-            $('html, body').animate({
-                scrollTop: $("#slide").offset().top - 90
-            }, 700);
-        });
-    }
-    if ($(window).width() < 376) {
-        $('.activate-slide').on('click', function (e) {
-            $('html, body').animate({
-                scrollTop: $("#slide").offset().top - 50
-            }, 700);
-        });
-    }
 
-    $('.about-us-link').on('click', function (e) {
-        $('.slide-section').addClass('slide');
-
-        if ($(window).width() > 992) {
-            $('html, body').animate({
-                scrollTop: $("#slide").offset().top + 1
-            }, 700);
-        } else {
-            $('html, body').animate({
-                scrollTop: $("#slide").offset().top - 90
-            }, 700);
-        }
-    });
-
-    $('.homepage-link').on('click', function (e) {
-        $('html, body').animate({
-            scrollTop: $("body").offset().top
-        }, 700);
-    });
-
-    $('.footer-link').on('click', function (e) {
-        if ($(window).width() > 992) {
-            $('html, body').animate({
-                scrollTop: $("#contacts").offset().top
-            }, 700);
-        } else {
-            $('html, body').animate({
-                scrollTop: $("#contacts").offset().top - 90
-            }, 700);
-        }
-
-    });
-
-    $('.products-link').on('click', function (e) {
-        $('.slide-section').addClass('slide');
-        if ($(window).width() > 992) {
-            $('html, body').animate({
-                scrollTop: $("#products").offset().top
-            }, 700);
-        } else {
-            $('html, body').animate({
-                scrollTop: $("#products").offset().top - 90
-            }, 700);
-        }
-    });
-
-    $('.scroll-up').on('click', function (e) {
-        $('html, body').animate({
-            scrollTop: $("body").offset().top
-        }, 700);
-    });
-
-    // Header add class on scroll
-    let header = $('.main-header');
-    let langSelect = $('#select-lang');
-    let triggerSection = $('#products').offset().top;
-
-    $(window).scroll(function () {
-        let scroll = $(window).scrollTop();
-
-        if (scroll >= triggerSection) {
-            header.addClass('dark-space');
-            langSelect.addClass('white-theme');
-        } else {
-            header.removeClass('dark-space');
-            langSelect.removeClass('white-theme');
-        }
-    });
 
     // Mobile header nav
     $('.mobile-toggle').on('click', function () {
@@ -276,19 +204,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     })
 
-    const splash = document.getElementById('splash');
 
-    function onMouseWheel(event) {
-        event.preventDefault();
-        const slide = document.getElementById('slide');
-        const lang = document.getElementById('select-lang');
-
-        slide.classList.add('slide');
-
-        if ($(window).width() < 1600) {
-            lang.classList.add('dark-theme');
-        }
-    }
-
-    splash.onwheel = onMouseWheel;
+    $('.scroll-up').on('click', function (e) {
+        $('html, body').animate({
+            scrollTop: $("body").offset().top
+        }, 700);
+    });
 })
