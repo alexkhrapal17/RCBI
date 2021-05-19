@@ -21,10 +21,6 @@
     justify-content: space-between;
   }
 
-  @media (max-width: $screen-xxs) {
-    min-height: 50px;
-  }
-
   &.dark-space {
     // add styles
   }
@@ -39,12 +35,6 @@
 
     a {
       display: block;
-
-      @media (max-width: $screen-xxs) {
-        img {
-          height: 30px;
-        }
-      }
     }
   }
 
@@ -64,11 +54,6 @@
       visibility: hidden;
       padding: 0 15px 50px;
       @include transition(.3s, all);
-
-      @media (max-width: $screen-xxs) {
-        top: 50px;
-        height: calc(100vh - 50px);
-      }
 
       &.active {
         opacity: 1;
@@ -120,10 +105,6 @@
       @media (max-height: 414px) and (orientation:landscape) {
         height: auto;
         margin-bottom: 50px;
-      }
-
-      @media (max-width: $screen-xxs) {
-        height: calc(100% - 50px);
       }
     }
   }
@@ -253,20 +234,11 @@
     display: block;
   }
 
-  @media (max-width: $screen-xxs) {
-    height: 50px;
-    width: 50px;
-  }
-
   &.active {
     span {
       &.line1 {
         transform: rotate(45deg);
         top: 42px;
-
-        @media (max-width: $screen-xxs) {
-          top: 22px;
-        }
       }
 
       &.line2 {
@@ -277,10 +249,6 @@
       &.line3 {
         transform: rotate(-45deg);
         bottom: 42px;
-
-        @media (max-width: $screen-xxs) {
-          bottom: 22px;
-        }
       }
     }
   }
@@ -296,26 +264,14 @@
 
     &.line1 {
       top: 35px;
-
-      @media (max-width: $screen-xxs) {
-        top: 15px;
-      }
     }
 
     &.line2 {
       top: 42px;
-
-      @media (max-width: $screen-xxs) {
-        top: 23px;
-      }
     }
 
     &.line3 {
       bottom: 35px;
-
-      @media (max-width: $screen-xxs) {
-        bottom: 13px;
-      }
     }
   }
 }
