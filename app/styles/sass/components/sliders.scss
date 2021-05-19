@@ -422,6 +422,11 @@
   padding: 60px;
   display: flex;
   min-height: 300px;
+  cursor: grab;
+  
+  &:active {
+    cursor: grabbing;
+  }
 
   @media (max-width: $screen-md) {
     display: block;
