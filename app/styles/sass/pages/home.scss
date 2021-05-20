@@ -4,7 +4,7 @@
   margin-bottom: -100vh;
   @include transition(.5s, transform);
 
-  @media (max-width: 1600px) {
+  @media (max-width: 1366px) {
     transform: translate(100%, -100vh);
   }
 
@@ -16,7 +16,7 @@
   &.slide {
     transform: translate(0, -100vh);
 
-    @media (max-width: 1600px) {
+    @media (max-width: 1366px) {
       transform: translate(0, -100vh);
     }
 
@@ -29,6 +29,7 @@
 // About us section
 .about-section {
   background: $gradient;
+  min-height: 50vh;
 
   @media (max-width: $screen-md) {
     padding: 85px 50px 50px;
@@ -88,7 +89,7 @@
   min-height: 50vh;
   overflow: hidden;
 
-  @media (max-width: 1600px) {
+  @media (max-width: 1366px) {
     min-height: unset;
   }
 }
