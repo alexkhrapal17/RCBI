@@ -128,6 +128,8 @@ document.addEventListener('DOMContentLoaded', () => {
         arrows: false,
         fade: true,
         speed: 300,
+        autoplay: true,
+        autoplaySpeed: 5000,
         asNavFor: '.slider-nav'
     });
     $('.slider-nav').slick({
@@ -136,6 +138,8 @@ document.addEventListener('DOMContentLoaded', () => {
         asNavFor: '.slider-for',
         dots: false,
         speed: 300,
+        autoplay: true,
+        autoplaySpeed: 5000,
         centerMode: true,
         centerPadding: '0',
         adaptiveHeight: true,

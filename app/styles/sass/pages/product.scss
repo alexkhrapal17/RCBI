@@ -96,6 +96,7 @@
 // Benefits section
 .benefits-section {
   padding: 115px 0;
+  background: $black;
 
   @media (max-width: $screen-md) {
     padding: 80px 0;
@@ -140,6 +141,7 @@
 // Gallery section
 .gallery-section {
   padding-bottom: 115px;
+  background: $black;
 }
 
 .gallery-title {

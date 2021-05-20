@@ -43,10 +43,10 @@
 
       &:after {
         border: none;
-        border-left: 2px solid rgba($white, .5);
-        border-bottom: 2px solid rgba($white, .5);
-        width: 8px;
-        height: 8px;
+        border-left: 1px solid rgba($white, .5);
+        border-bottom: 1px solid rgba($white, .5);
+        width: 6px;
+        height: 6px;
         transform: rotate(-45deg);
       }
     }
@@ -182,10 +182,10 @@
 
       &:after {
         border: none;
-        border-left: 2px solid $black;
-        border-bottom: 2px solid $black;
-        width: 8px;
-        height: 8px;
+        border-left: 1px solid $black;
+        border-bottom: 1px solid $black;
+        width: 6px;
+        height: 6px;
         transform: rotate(-45deg);
         @include transition(.2s, border-color);
 
