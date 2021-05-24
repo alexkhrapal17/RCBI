@@ -35,7 +35,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     // Selects
-    $('.select-lang').selectric();
+    $('.select-lang').selectric().on('change', function() {
+        document.location.href = $(this).val();
+    });
+
+
     $('.input-select').selectric().on('change', function () {
         let placeholder = $('.selectric-input-select .selectric .label');
         let selected = $('.selectric-items ul li[data-index="0"]');
