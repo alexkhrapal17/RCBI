@@ -582,20 +582,20 @@
 
 // Products video
 .product-videos-slider {
+  .slick-track {
+    margin: 0;
+  }
+
   .slick-slide {
     position: relative;
-    min-height: 467px;
-
-    @media (max-width: 1600px) {
-      min-height: 340px;
-    }
+    min-height: 50vh;
 
     @media (max-width: 1366px) {
       min-height: 467px;
     }
 
     .img-responsive {
-      width: auto !important;
+      position: absolute;
       @include img-cover(center);
     }
 
@@ -609,6 +609,7 @@
       display: block;
       position: absolute;
       top: 0;
+      z-index: 1;
       left: 0;
       width: 100%;
       height: 100%;
